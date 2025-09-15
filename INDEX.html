@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Uttam Venkatesh – Analog IC / Hardware Engineer</title>
-  <meta name="description" content="Analog & mixed‑signal IC / hardware engineer with 7+ years in automotive (Bosch) and a Master's in Microsystems Engineering (Uni Freiburg). Open to roles in analog IC design, mixed‑signal, power electronics, and biomedical hardware." />
+  <meta name="description" content="Analog & mixed-signal IC / hardware engineer with 7+ years in automotive (Bosch) and a Master's in Microsystems Engineering (Uni Freiburg). Open to roles in analog IC design, mixed-signal, power electronics, and biomedical hardware." />
   <meta property="og:title" content="Uttam Venkatesh – Analog IC / Hardware Engineer" />
-  <meta property="og:description" content="Analog & mixed‑signal IC / hardware engineer with 7+ years in automotive (Bosch) and a Master's in Microsystems Engineering (Uni Freiburg)." />
+  <meta property="og:description" content="Analog & mixed-signal IC / hardware engineer with 7+ years in automotive (Bosch) and a Master's in Microsystems Engineering (Uni Freiburg)." />
   <meta property="og:type" content="website" />
   <meta name="color-scheme" content="light dark" />
   <style>
@@ -15,241 +15,28 @@
       --card: #121318;
       --text: #edf1f7;
       --muted:#a6b0bf;
-      --brand:#5eead4; /* teal */
-      --accent:#a78bfa; /* purple */
-      --ring: rgba(94,234,212,0.5);
+      --brand:#5eead4;
+      --accent:#a78bfa;
       --shadow: 0 10px 25px rgba(0,0,0,.35);
       --radius: 18px;
       --maxw: 980px;
     }
     @media (prefers-color-scheme: light){
-      :root{ --bg:#f7f8fb; --card:#ffffff; --text:#0c1222; --muted:#586070; --shadow: 0 10px 25px rgba(10,10,30,.08);}  
+      :root{ --bg:#f7f8fb; --card:#ffffff; --text:#0c1222; --muted:#586070; --shadow: 0 10px 25px rgba(10,10,30,.08);}
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
-      margin:0; font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, "Noto Sans", "Helvetica Neue", sans-serif; 
-      background:linear-gradient(120deg, var(--bg), #111827 40%, #0b1220 100%);
+      margin:0; font:16px/1.55 system-ui,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      background:linear-gradient(120deg,var(--bg),#111827 40%,#0b1220 100%);
       color:var(--text);
     }
-    header, main, footer{width:100%; display:flex; justify-content:center}
-    .wrap{width:100%; max-width:var(--maxw); padding:24px}
-    .hero{margin:28px 0 10px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow:var(--shadow)}
-    .stack{display:grid; gap:16px}
-    h1{font-size:clamp(28px, 3.5vw, 42px); margin:0 0 10px 0; letter-spacing:0.2px}
-    h2{font-size:clamp(20px,2.5vw,26px); margin:0 0 8px 0}
-    p{margin:0 0 10px 0; color:var(--muted)}
-    .badge{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); color:var(--text); font-weight:600}
-    .row{display:grid; gap:18px}
-    @media (min-width: 860px){ .row{grid-template-columns: 1.2fr .8fr} }
-    .grid{display:grid; gap:14px}
-    .grid.cols-3{grid-template-columns: repeat(auto-fit, minmax(200px,1fr))}
-    .pill{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.12); color:var(--text); background:rgba(255,255,255,.04); font-size:13px}
-    .list{list-style:none; padding:0; margin:0; display:grid; gap:10px}
-    .list li{padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03)}
-    a{color:var(--brand); text-decoration:none}
-    a:hover{ text-decoration:underline }
-    .cta{display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 0}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)); color:var(--text); font-weight:700}
-    .btn:focus{outline:2px solid var(--ring); outline-offset:2px}
-    .subtitle{font-weight:600; color:var(--muted); letter-spacing:.3px}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
-    footer{margin:26px 0 40px}
-    .fine{font-size:12px; color:var(--muted)}
-    .sep{height:1px; background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.15), rgba(255,255,255,0)); margin:24px 0}
-    .toggle{position:fixed; right:16px; bottom:16px}
-  </style>
-  <script>
-    // Light/Dark toggle (overrides prefers-color-scheme)
-    function toggleTheme(){
-      const cur = document.documentElement.dataset.theme;
-      document.documentElement.dataset.theme = (cur === 'light') ? 'dark' : 'light';
-      localStorage.setItem('themePref', document.documentElement.dataset.theme);
-    }
-    (function(){
-      const pref = localStorage.getItem('themePref');
-      if(pref){ document.documentElement.dataset.theme = pref; }
-    })();
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Uttam Venkatesh",
-    "jobTitle": "Analog IC / Hardware Engineer",
-    "alumniOf": {"@type":"CollegeOrUniversity","name":"University of Freiburg"},
-    "worksFor": {"@type":"Organization","name":"Bosch (2014–2021), Monolithic Power Systems (2024–2025)"},
-    "knowsAbout": ["Analog IC design","Mixed‑signal","Power electronics","Automotive ECU","ISO 26262","EMI/EMC","Cadence Virtuoso","KiCad"],
-    "sameAs": [
-      "https://www.linkedin.com/in/YOUR-LINKEDIN",
-      "https://github.com/YOUR-GITHUB"
-    ]
-  }
-  </script>
-</head>
-<body>
-  <header>
-    <div class="wrap hero">
-      <div class="stack card" style="padding:22px 22px 18px">
-        <div class="badge" aria-label="Headline">
-          <span>Open to opportunities</span>
-          <span class="mono">Analog IC • Mixed‑Signal • Power</span>
-        </div>
-        <h1>Uttam Venkatesh</h1>
-        <p class="subtitle">Analog IC / Hardware Engineer — ex‑Bosch | M.Sc. Microsystems Engineering, University of Freiburg (Aug 2024)</p>
-        <div class="cta">
-          <a class="btn" href="mailto:YOUR.EMAIL@EXAMPLE.COM">Email</a>
-          <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
-          <a class="btn" href="https://github.com/YOUR-GITHUB">GitHub</a>
-          <a class="btn" href="docs/Uttam_Venkatesh_CV.pdf">Download CV (PDF)</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="wrap">
-      <div class="row">
-        <!-- LEFT COLUMN -->
-        <section class="stack">
-          <div class="card" style="padding:18px 20px">
-            <h2>Profile</h2>
-            <p>
-              Analog & mixed‑signal engineer with ~7 years in automotive ECU hardware (Bosch, India) plus recent experience in applications at MPS. Master’s thesis on ultra‑low‑power ASICs for energy harvesting (XFAB 350 nm, OTA design). Seeking junior/entry roles in analog IC, mixed‑signal, or power/biomedical hardware.
-            </p>
-          </div>
-
-          <div class="card" style="padding:18px 20px">
-            <h2>Key Skills</h2>
-            <div class="grid cols-3">
-              <span class="pill">Analog IC: OTA, Bandgap, LDO</span>
-              <span class="pill">Mixed‑Signal basics (ADC/DAC)</span>
-              <span class="pill">Cadence Virtuoso</span>
-              <span class="pill">Spectre / ADE</span>
-              <span class="pill">PCB: KiCad, Allegro</span>
-              <span class="pill">Power: Buck / Boost / LDO</span>
-              <span class="pill">EMI/EMC</span>
-              <span class="pill">ISO 26262 (ASIL‑D)</span>
-              <span class="pill">CAN / LIN</span>
-              <span class="pill">LabVIEW test benches</span>
-              <span class="pill">Python / MATLAB</span>
-              <span class="pill">Signal Integrity (HyperLynx)</span>
-            </div>
-          </div>
-
-          <div class="card" style="padding:18px 20px">
-            <h2>Experience</h2>
-            <ul class="list">
-              <li>
-                <strong>Monolithic Power Systems (MPS)</strong> — Application Engineer (2024–2025)<br>
-                <span class="muted">Customer support, application debug, demos, and cross‑functional collaboration for power management ICs.</span>
-              </li>
-              <li>
-                <strong>Bosch, RBEI (India)</strong> — Hardware Engineer (2014–2021)<br>
-                <span class="muted">ECU design & validation (Perfectly Keyless, CAN Gateway, EPS). Built failure‑injection test systems for ASIL‑D hardware; led EMI/EMC compliance and root‑cause analysis.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="card" style="padding:18px 20px">
-            <h2>Selected Projects</h2>
-            <ul class="list">
-              <li>
-                <strong>Energy‑harvesting ASIC (Master’s Thesis)</strong> — Load‑matching circuit with complex load emulation; ultra‑low‑power OTA on XFAB 350 nm.
-              </li>
-              <li>
-                <strong>Failure‑Injection Test Bench</strong> — Automated HW/SW bench for ASIL‑D ECU validation (LabVIEW, Python; CANoe/CANalyzer).
-              </li>
-              <li>
-                <strong>Bidirectional DC‑DC Prototype</strong> — Buck/boost converter with current‑mode control; layout with SI/EMI considerations.
-              </li>
-            </ul>
-          </div>
-
-          <div class="card" style="padding:18px 20px">
-            <h2>Education & Certifications</h2>
-            <ul class="list">
-              <li><strong>M.Sc., Microsystems Engineering</strong> — University of Freiburg, 2024</li>
-              <li><strong>B.E., Electronics & Communication</strong> — (Your University), 2014</li>
-              <li>ISO 26262 awareness • Signal Integrity coursework • German B1.1 (progressing)</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- RIGHT COLUMN -->
-        <aside class="stack">
-          <div class="card" style="padding:18px 20px">
-            <h2>Quick Facts</h2>
-            <ul class="list">
-              <li>Location: Freiburg, Germany (open to relocate EU/UK)</li>
-              <li>Availability: Immediate</li>
-              <li>Work Authorization: EU Blue Card / §20 job‑seeker</li>
-              <li>Languages: English (fluent), German (B1 → B2)</li>
-            </ul>
-          </div>
-
-          <div class="card" style="padding:18px 20px">
-            <h2>Focus Areas</h2>
-            <div class="grid">
-              <span class="pill">Analog IC (junior)</span>
-              <span class="pill">Mixed‑Signal</span>
-              <span class="pill">Power Electronics</span>
-              <span class="pill">Biomedical Interfaces</span>
-              <span class="pill">HW Testing/Validation</span>
-            </div>
-          </div>
-
-          <div class="card" style="padding:18px 20px">
-            <h2>Links</h2>
-            <ul class="list">
-              <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a></li>
-              <li><a href="https://github.com/YOUR-GITHUB">GitHub</a></li>
-              <li><a href="docs/Uttam_Venkatesh_CV.pdf">CV (PDF)</a></li>
-              <li><a href="#projects">Project Gallery (add repo links)</a></li>
-            </ul>
-          </div>
-
-          <div class="card" style="padding:18px 20px">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:YOUR.EMAIL@EXAMPLE.COM">YOUR.EMAIL@EXAMPLE.COM</a></p>
-            <p>Prefer: brief problem statement + role + location.</p>
-          </div>
-
-          <div class="card" style="padding:18px 20px">
-            <h2>One‑liner</h2>
-            <p>"Hardware engineer pivoting to analog IC design — blending automotive‑grade rigor (ASIL‑D, EMI/EMC) with fresh IC fundamentals."
-            </p>
-          </div>
-        </aside>
-      </div>
-
-      <div class="sep"></div>
-
-      <section class="card" style="padding:18px 20px">
-        <h2>For Recruiters</h2>
-        <p>Ideal roles: Junior Analog IC Designer, Mixed‑Signal Engineer, Power Electronics Engineer, or Hardware Test/Validation Engineer. Interested in Belgium, Netherlands, Germany, Denmark, UK.</p>
-        <p>Interview availability: Weekdays 09:00–18:00 CET (flexible for time zones).</p>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="fine">© <span id="y"></span> Uttam Venkatesh — Last updated: <span id="d"></span>.  • <a href="#" onclick="toggleTheme();return false;">Toggle theme</a></div>
-    </div>
-  </footer>
-
-  <button class="btn toggle" onclick="toggleTheme()">🌗 Theme</button>
-
-  <script>
-    (function(){
-      const now = new Date();
-      document.getElementById('y').textContent = now.getFullYear();
-      document.getElementById('d').textContent = now.toISOString().slice(0,10);
-    })();
-  </script>
-</body>
-</html>
-
-
+    header, main, footer{width:100%;display:flex;justify-content:center}
+    .wrap{width:100%;max-width:var(--maxw);padding:24px}
+    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
+    h1{font-size:clamp(28px,3.5vw,42px);margin:0 0 10px}
+    h2{font-size:clamp(20px,2.5vw,26px);margin:0 0 8px}
+    p{margin:0 0 10px;color:var(--muted)}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:var(--text);text-decoration:none;font-weight:700}
+    .btn:hover{text-decoration:underline}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:var(--text);background:rgba(255,255,255,.04);font-size:13px;margin:3px}
+    .list{list-style:none;paddi
